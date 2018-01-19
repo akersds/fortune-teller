@@ -20,6 +20,13 @@ public class FortuneTeller {
 
 		System.out.println("Enter your number of siblings");
 		int numberSiblings = input.nextInt();
+		
+		if (numberSiblings == 0) {
+		  System.out.println("You have" + 0 + ", you will live in Delhi, India.");
+		  
+		if (numberSiblings == 1) {
+		  System.out.println("You have" + 1 + ", you will live in Nassau, Bahamas.");
+		}
 
 		System.out.println("Enter your age");
 		int ageNumber = input.nextInt();
@@ -37,5 +44,8 @@ public class FortuneTeller {
 			int birthMonth = input.nextInt();
 
 		}
+		}
 	}
 }
+
+
