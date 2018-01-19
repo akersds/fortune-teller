@@ -13,39 +13,77 @@ public class FortuneTeller {
 		String lastName = input.next().trim();
 
 		System.out.println("Enter your favorite ROYGBIV color");
+		String transport; 
 		String favoriteROYGBIV = input.next();
+		if (favoriteROYGBIV.equalsIgnoreCase("red")) {
+			transport = "Benz";
+		} else if (favoriteROYGBIV.equalsIgnoreCase("orange")) {
+			transport = "donkey";
+		} else if (favoriteROYGBIV.equalsIgnoreCase("yellow")) {
+			transport = "flying carpet";
+		} else if (favoriteROYGBIV.equalsIgnoreCase("green")) {
+			transport = "taxi";
+		} else if (favoriteROYGBIV.equalsIgnoreCase("blue")) {
+			transport = "roller skates";
+		} else if (favoriteROYGBIV.equalsIgnoreCase("indigo")) {
+			transport = "jeep";
+		} else if (favoriteROYGBIV.equalsIgnoreCase("violet")) {
+			transport = "Ford";
 
+		}else {
+			transport="goose";
+		}
 		System.out.println("Enter help for list of your favorite ROYGBIV color");
 		String helpROYGBIV = input.next();
 
 		System.out.println("Enter your number of siblings");
 		int numberSiblings = input.nextInt();
-		
+		String vacationHome = "";
 		if (numberSiblings == 0) {
-		  System.out.println("You have" + 0 + ", you will live in Delhi, India.");
-		  
-		if (numberSiblings == 1) {
-		  System.out.println("You have" + 1 + ", you will live in Nassau, Bahamas.");
+			vacationHome = "Delhi, India.";
+
+		} else if (numberSiblings == 1) {
+			vacationHome = "Fiji Islands.";
+
+		} else if (numberSiblings == 2) {
+			vacationHome = "New York City.";
+
+		} else if (numberSiblings == 3) {
+			vacationHome = "Portland, Oregon.";
+
+		} else if (numberSiblings > 3) {
+			vacationHome = "Columbus.";
+		}else {
+			vacationHome = "UlaanBattar";
 		}
 
 		System.out.println("Enter your age");
 		int ageNumber = input.nextInt();
-
+        int yearsRetire;
 		if (ageNumber % 2 == 0) { // if ageNumber is evenly divisible by 2
-			System.out.println(ageNumber + "is even");
-			String yearsRetire1 = input.nextLine();
-			System.out.println("You will retire in 12 years");
+			yearsRetire=10;
 		} else {
-			System.out.println(ageNumber + " is odd");
-			String yearsRetire2 = input.nextLine();
-			System.out.println("You will retire in 14 years");
-
-			System.out.println("Enter your birth month");
-			int birthMonth = input.nextInt();
+			yearsRetire=11;
+			
 
 		}
+		System.out.println("Enter your birth month");
+		int birthMonth = input.nextInt();
+		if (birthMonth >= 1 && birthMonth <= 4) {
+			System.out.println("You have you will have 256,00.76 in your bank account.");
+		} else if (birthMonth >= 5 && birthMonth <= 8) {
+			System.out.println("You have you will have 3,687,105.42 in your bank account.");
+		} else if (birthMonth >= 9 && birthMonth <= 12) {
+			System.out.println("You have you will have 86.23 in your bank account.");
+		} else {
+			System.out.println("account balance is zero");
+			{
+			}
 		}
+	
+		System.out.println(
+				firstName + " "+lastName + " will retire in "+yearsRetire+" years with *[bank balance]* in the bank\r\n, a vacation home in "
+						+ vacationHome + ", and travel by "+ transport +"");
+ 
 	}
 }
-
-
