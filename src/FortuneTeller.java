@@ -26,7 +26,7 @@ public class FortuneTeller {
 		} else if (favoriteROYGBIV.equalsIgnoreCase("orange")) {
 			transport = "donkey";
 		} else if (favoriteROYGBIV.equalsIgnoreCase("yellow")) {
-			transport = "flying carpet";
+			transport = "flying carpet"; 
 		} else if (favoriteROYGBIV.equalsIgnoreCase("green")) {
 			transport = "taxi";
 		} else if (favoriteROYGBIV.equalsIgnoreCase("blue")) {
